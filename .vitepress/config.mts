@@ -2,11 +2,13 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  srcDir: "docs",
+  srcDir: ".",
   
-  title: "nonsenz's Minecraft plugins docs",
-  description: "Documentation for nonsenz's MC plugins!",
+  title: "nonsenz's projects",
+  description: "The homepage for nonsenz's Minecraft plugins and other projects",
   themeConfig: {
+    logo: "/logo.png",
+
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
@@ -25,6 +27,11 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
+    ],
+
+    footer: {
+      message: 'All rights reserved',
+      copyright: 'Copyright © 2025-present nonsenz'
+    }
   }
 })
