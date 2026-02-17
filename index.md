@@ -3,9 +3,12 @@
 layout: home
 
 hero:
-  name: "nonsenz's Minecraft plugins docs"
-  text: "Documentation for nonsenz's MC plugins!"
-  tagline: My great project tagline
+  name: "My projects' homepage"
+  text: ""
+  tagline: Documentation for my projects!
+  image:
+    src: /logo.png
+    alt: My Minecraft skin's head
   actions:
     - theme: brand
       text: Markdown Examples
