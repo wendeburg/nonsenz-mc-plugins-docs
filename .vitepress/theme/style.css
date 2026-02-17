@@ -92,16 +92,13 @@
 
 :root {
   --vp-home-hero-name-color: transparent;
-  --vp-home-hero-name-background: -webkit-linear-gradient(
-    120deg,
-    #bd34fe 30%,
-    #41d1ff
-  );
+  --vp-home-hero-name-background: -webkit-linear-gradient(130deg,rgba(9, 116, 217, 1) 0%, rgba(90, 214, 177, 1) 50%, rgba(9, 116, 217, 1) 100%);
 
   --vp-home-hero-image-background-image: linear-gradient(
     -45deg,
-    #bd34fe 50%,
-    #47caff 50%
+  rgb(0, 71, 137) 0%,
+  rgb(65, 151, 125) 50%,
+  rgb(0, 71, 137) 100%
   );
   --vp-home-hero-image-filter: blur(44px);
 }
@@ -129,3 +126,56 @@
   --vp-custom-block-tip-code-bg: var(--vp-c-brand-soft);
 }
 
+.VPHome .VPImage {
+  border-radius: 12px;
+  max-width: min-content !important;
+  max-height: min-content !important;
+}
+
+.VPNav .logo {
+  border-radius: 3px;
+  max-width: min-content !important;
+  max-height: min-content !important;
+}
+
+.VPHero {
+  margin-top: calc(var(--vp-nav-height)*1.25) !important;
+  margin-bottom: calc(var(--vp-nav-height)*0.5) !important;
+}
+
+.main {
+  text-align: unset;
+  transform: translate(0px, -34px) !important;
+}
+
+.actions {
+  justify-content: center !important;
+  max-width: 100% !important;
+}
+
+.tagline {
+  text-align: center !important;
+  max-width: 100% !important;
+}
+
+.name {
+  max-width: 100% !important;
+  text-align: center !important;
+}
+
+@media (max-width: 960px) {
+  .VPHero {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+  }
+
+  div.main {
+    margin-top: calc(var(--vp-nav-height)*1.1) !important;;
+  }
+}
+
+@media (max-width: 639px) {
+  div.main {
+    margin-top: calc(var(--vp-nav-height)*1.4) !important;
+  }
+}
