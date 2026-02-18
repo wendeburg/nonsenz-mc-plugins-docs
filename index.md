@@ -16,6 +16,9 @@ hero:
     - theme: alt
       text: API Examples
       link: /api-examples
+    - theme: discord
+      text: Discord Server
+      link: "https://discord.gg"
 
 features:
   - title: Feature A

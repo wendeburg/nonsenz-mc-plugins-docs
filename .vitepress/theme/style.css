@@ -86,6 +86,28 @@
   --vp-button-brand-active-bg: var(--vp-c-brand-1);
 }
 
+/* Discord button styles */
+.VPButton.discord {
+  background-color: #5865F2;
+  color: #ffffff;
+  border: transparent;
+}
+.VPButton.discord:hover {
+  background-color: #4752C4;
+  color: #ffffff;
+}
+.VPButton.discord:active {
+  background-color: #3C45AA;
+  color: #ffffff;
+}
+.VPButton.discord .discord-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
 /**
  * Component: Home
  * -------------------------------------------------------------------------- */

@@ -12,6 +12,16 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
+    if (typeof window !== 'undefined') {
+      router.onAfterRouteChange = () => {
+        const discordBtn = document.querySelectorAll('.VPButton.discord')
+        if (discordBtn) {
+          discordBtn.forEach(btn => {
+            btn.setAttribute('target', '_blank')
+            btn.setAttribute('rel', 'noopener noreferrer')
+          })
+        }
+      }
+    }
   }
 } satisfies Theme
