@@ -10,22 +10,15 @@ hero:
     src: /logo.png
     alt: My Minecraft skin's head
   actions:
-    - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
-    - theme: alt
-      text: API Examples
-      link: /api-examples
     - theme: discord
-      text: Discord Server
-      link: "https://discord.gg"
+      text: Join Discord for Support!
+      link: "https://discord.gg/CYvfmcXZRk"
+    - theme: alt
+      text: See documentation
+      link: /docs/plugins_list
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Chatty
+    details: A simple and powerful chat plugin for PaperMC servers.
 ---
 
