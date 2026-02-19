@@ -88,6 +88,9 @@
 
 /* Discord button styles */
 .VPButton.discord {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: #5865F2;
   color: #ffffff;
   border: transparent;
@@ -101,11 +104,13 @@
   color: #ffffff;
 }
 .VPButton.discord .discord-icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25em;
+  height: 1.25em;
   margin-left: 0.5rem;
-  vertical-align: middle;
+  margin-top: 0.025em;
 }
 
 /**
@@ -187,8 +192,8 @@
 
 @media (max-width: 960px) {
   .VPHero {
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
   div.main {
