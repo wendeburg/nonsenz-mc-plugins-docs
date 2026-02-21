@@ -24,10 +24,6 @@ export default defineConfig({
       }
     ],
 
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/wendeburg' }
-    ],
-
     footer: {
       message: 'All rights reserved',
       copyright: 'Copyright © 2025-present nonsenz'
