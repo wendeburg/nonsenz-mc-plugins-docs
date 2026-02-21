@@ -3,6 +3,10 @@
  * https://github.com/vuejs/vitepress/blob/main/src/client/theme-default/styles/vars.css
  */
 
+html {
+  scrollbar-gutter: stable;
+}
+
 /**
  * Colors
  *
@@ -204,5 +208,29 @@
 @media (max-width: 639px) {
   div.main {
     margin-top: calc(var(--vp-nav-height)*1.4) !important;
+  }
+}
+
+/**
+ * Navbar fixes to prevent logo shift on large screens
+ * -------------------------------------------------------------------------- */
+
+@media (min-width: 1440px) {
+  /* Homepage navbar title positioning */
+  .VPNavBar:not(.has-sidebar) .title {
+    margin-left: 0 !important;
+  }
+  
+  /* Ensure the container on homepage exactly matches the positioning logic on docs page */
+  .VPNavBar:not(.has-sidebar) .container {
+    max-width: calc(var(--vp-layout-max-width) - 64px) !important;
+    margin: 0 auto !important;
+  }
+
+  /* Docs page navbar title positioning */
+  .VPNavBar.has-sidebar .title {
+    /* Explicitly use the same calculation as homepage to avoid sub-pixel differences or scrollbar issues */
+    padding-left: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2) !important;
+    width: calc((100% - (var(--vp-layout-max-width) - 64px)) / 2 + var(--vp-sidebar-width) - 32px) !important;
   }
 }
