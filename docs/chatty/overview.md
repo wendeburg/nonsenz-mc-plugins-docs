@@ -7,7 +7,7 @@ Chatty is a chat management plugin for Paper servers (1.21+). It gives you full 
 - **Chat Formats** — Define permission-based chat formats with hover text and click actions using MiniMessage. See [Formats](formats.md).
 - **Channels** — Create chat channels with shortcuts, range limits, world isolation, per-channel formatting, and two-way communication with discord. See [Channels](channels.md).
 - **Message Rules** — Filter and process messages with regex conditions, replacements, message cancellation, and command execution. See [Rules](rules.md).
-- **Commands & Permissions** — Fine-grained permissions for channel access, spying, format selection, and rule bypassing. See [Commands & Permissions](commands-and-permissions.md).
+- **Commands & Permissions** — Fine-grained permissions for channel access, spying, format selection, and rule bypassing. See [Commands & Permissions](commands_and_permissions.md).
 
 ## Integrations
 
