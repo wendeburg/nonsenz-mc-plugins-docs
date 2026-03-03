@@ -19,6 +19,7 @@ hero:
 
 features:
   - title: Chatty
-    details: A simple and powerful chat plugin for PaperMC servers.
+    details: A chat management plugin for Paper servers (1.21+). It gives you full control over how chat messages are formatted, routed through channels, and filtered with rules.
+    link: /docs/chatty/overview
 ---
 
