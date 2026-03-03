@@ -12,14 +12,19 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Documentation', link: '/docs/plugins_list' }
+      { text: 'Documentation', link: '/docs/chatty/overview' }
     ],
 
     sidebar: [
       {
         text: 'Chatty',
         items: [
-          { text: 'Coming soon', link: '/docs/chatty/coming_soon' },
+          { text: 'Overview', link: '/docs/chatty/overview' },
+          { text: 'Configuration', link: '/docs/chatty/configuration' },
+          { text: 'Formats', link: '/docs/chatty/formats' },
+          { text: 'Channels', link: '/docs/chatty/channels' },
+          { text: 'Rules', link: '/docs/chatty/rules' },
+          { text: 'Commands & Permissions', link: '/docs/chatty/commands_and_permissions' },
         ]
       }
     ],
