@@ -26,6 +26,16 @@ export default defineConfig({
           { text: 'Rules', link: '/docs/chatty/rules' },
           { text: 'Commands & Permissions', link: '/docs/chatty/commands_and_permissions' },
         ]
+      },
+            {
+        text: 'Announcements',
+        items: [
+          { text: 'Overview', link: '/docs/announcements/overview' },
+          { text: 'Configuration', link: '/docs/announcements/configuration' },
+          { text: 'Automatic Announcements', link: '/docs/announcements/automatic_announcements' },
+          { text: 'Manual Announcements', link: '/docs/announcements/manual_announcements' },
+          { text: 'Commands & Permissions', link: '/docs/announcements/commands_and_permissions' },
+        ]
       }
     ],
 
