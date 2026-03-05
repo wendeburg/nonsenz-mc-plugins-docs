@@ -2,3 +2,6 @@
 
 1. [Chatty](chatty/overview.md) — Chatty is a chat management plugin for Paper servers (1.21+). It gives you full control over how chat messages are formatted, routed through channels, and filtered with rules.
 2. [Announcements](announcements/overview.md) — Announcements is a broadcast plugin for Paper servers (1.21+). It lets you set up automatic scheduled announcements and trigger manual announcements with commands, all formatted with MiniMessage.
+3. [Dialogue](dialogue/overview.md) — Dialogue is a messaging and mail plugin for Paper servers (1.21+). It provides direct messaging between players, a persistent mail system for offline communication, and admin tools for monitoring player conversations.
+4. [BetterChatFeelings](betterchatfeelings/overview.md) — BetterChatFeelings is a chat emote plugin for Paper 1.21+ servers that lets players send customizable "feelings" (social interactions like hugs, pokes, etc.) to other players.
+5. [Custom Death Messages](custom_death_messages/overview.md) — CustomDeathMessages is a death message customization plugin for Paper servers (1.21+). It lets you define custom death messages based on the type of damage and the entity that caused the kill, with full MiniMessage formatting support.
