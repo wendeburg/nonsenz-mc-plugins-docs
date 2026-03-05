@@ -12,7 +12,7 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Documentation', link: '/docs/chatty/overview' }
+      { text: 'Documentation', link: '/docs/plugins_list' }
     ],
 
     sidebar: [
