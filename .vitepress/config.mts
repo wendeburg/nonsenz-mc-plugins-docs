@@ -27,7 +27,7 @@ export default defineConfig({
           { text: 'Commands & Permissions', link: '/docs/chatty/commands_and_permissions' },
         ]
       },
-            {
+      {
         text: 'Announcements',
         items: [
           { text: 'Overview', link: '/docs/announcements/overview' },
@@ -36,7 +36,33 @@ export default defineConfig({
           { text: 'Manual Announcements', link: '/docs/announcements/manual_announcements' },
           { text: 'Commands & Permissions', link: '/docs/announcements/commands_and_permissions' },
         ]
-      }
+      },
+      {
+        text: 'Custom Death Messages',
+        items: [
+          { text: 'Overview', link: '/docs/custom_death_messages/overview' },
+          { text: 'Configuration', link: '/docs/custom_death_messages/configuration' },
+          { text: 'Death Messages', link: '/docs/custom_death_messages/death_messages' },
+          { text: 'Commands & Permissions', link: '/docs/custom_death_messages/commands_and_permissions' },
+        ]
+      },
+      {
+        text: 'BetterChatFeelings',
+        items: [
+          { text: 'Overview', link: '/docs/betterchatfeelings/overview' },
+          { text: 'Configuration', link: '/docs/betterchatfeelings/configuration' },
+          { text: 'Feelings', link: '/docs/betterchatfeelings/feelings' },
+          { text: 'Commands & Permissions', link: '/docs/betterchatfeelings/commands_and_permissions' },
+        ]
+      },
+      {
+        text: 'Dialogue',
+        items: [
+          { text: 'Overview', link: '/docs/dialogue/overview' },
+          { text: 'Configuration', link: '/docs/dialogue/configuration' },
+          { text: 'Commands & Permissions', link: '/docs/dialogue/commands_and_permissions' },
+        ]
+      },
     ],
 
     footer: {

@@ -58,6 +58,8 @@ Each channel can define shortcut commands in `channels.yml`. These let you send 
 
 ## Permissions
 
+All permissions are given to OPs by default. You can grant individual permissions using a permissions plugin.
+
 ### Command Permissions
 
 | Permission | Description |

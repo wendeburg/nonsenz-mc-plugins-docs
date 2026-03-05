@@ -55,6 +55,8 @@ Triggers a manual announcement with a player context. This allows PlaceholderAPI
 
 ## Permissions
 
+All permissions are given to OPs by default. You can grant individual permissions using a permissions plugin.
+
 | Permission | Description |
 |---|---|
 | `announcements.command.reload` | Allows using `/announcements reload` |
