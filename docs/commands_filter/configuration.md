@@ -76,15 +76,6 @@ In this example with whitelist mode:
 
 All system messages the plugin sends to players. Every message supports MiniMessage tags for formatting.
 
-### Prefix System
-
-The `prefix` key defines a reusable prefix string. Other messages can reference it with `%prefix%`.
-
-```yaml
-prefix: "<yellow><bold>CommandsFilter</bold></yellow> <dark_gray>»</dark_gray>"
-plugin_reloaded: "%prefix% <green>Reloaded plugin!</green>"
-```
-
 ### Messages Reference
 
 | Key | Description |
@@ -92,12 +83,3 @@ plugin_reloaded: "%prefix% <green>Reloaded plugin!</green>"
 | `prefix` | Global prefix referenced by other messages via `%prefix%` |
 | `plugin_reloaded` | Confirmation after reloading the plugin |
 | `command_is_blocked` | Shown when a player tries to use a filtered command and `block_filtered_commands` is enabled |
-
-### Example
-
-```yaml
-prefix: "<yellow><bold>CommandsFilter</bold></yellow> <dark_gray>»</dark_gray>"
-
-plugin_reloaded: "%prefix% <green>Reloaded plugin!</green>"
-command_is_blocked: "%prefix% <red>You don't have access to this command!</red>"
-```

@@ -28,36 +28,11 @@ These settings are nested under `discordsrv_integration` in `settings.yml`.
 | `sender_text_provider` | String | `"default"` | PlaceholderAPI placeholder for the sender name in Discord messages. |
 | `receiver_text_provider` | String | `"default"` | PlaceholderAPI placeholder for the receiver name in Discord messages. |
 
-### Example
-
-```yaml
-feelings_cooldown: 60
-allow_self_feelings: false
-log_feelings_to_console: true
-only_use_global_messages: false
-sender_text_provider: "default"
-receiver_text_provider: "default"
-save_player_data_every_ticks: 6000
-
-discordsrv_integration:
-  enabled: false
-  channel: ""
-  default_embed_color: "#3E61FA"
-  sender_text_provider: "default"
-  receiver_text_provider: "default"
-```
-
 ---
 
 ## messages.yml
 
 All plugin messages support [MiniMessage](https://docs.advntr.dev/minimessage/format.html) formatting. The `%prefix%` placeholder is available in every message and is replaced with the value of the `prefix` key.
-
-### Prefix
-
-```yaml
-prefix: '<green><bold>FEELINGS</bold></green> <dark_gray>»</dark_gray>'
-```
 
 ### Messages
 

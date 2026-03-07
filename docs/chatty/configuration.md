@@ -32,15 +32,6 @@ discord_roles_allowed_minimessage_use:
 
 All system messages the plugin sends to players. Every message supports MiniMessage tags for formatting.
 
-### Prefix System
-
-The `prefix` key defines a reusable prefix string. Other messages can reference it with `%prefix%`.
-
-```yaml
-prefix: "<green><bold>Chatty</bold></green> <dark_gray>»</dark_gray>"
-command_only_usable_by_player: "%prefix% <red>This command can only be used by a player!</red>"
-```
-
 ### Messages Reference
 
 | Key | Placeholders | Description |
