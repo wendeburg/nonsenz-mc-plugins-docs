@@ -33,5 +33,8 @@ features:
   - title: Custom Death Messages
     details: A death message customization plugin for Paper servers (1.21+). It lets you define custom death messages based on the type of damage and the entity that caused the kill, with full MiniMessage formatting support.
     link: /docs/custom_death_messages/overview
+  - title: CommandsFilter
+    details: A command visibility and access control plugin for Paper servers (1.21+). It lets you control which commands players can see in tab-completion and optionally block them from executing filtered commands, based on their permission group.
+    link: /docs/commands_filter/overview
 ---
 
