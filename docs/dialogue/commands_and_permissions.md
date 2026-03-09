@@ -32,6 +32,10 @@ Sends a mail to any player. The recipient does not need to be online — mails a
 
 Displays your received mails in a paginated list. Unread mails are highlighted differently from read mails. Each entry has a clickable delete button.
 
+The `[page]` argument is 1-indexed — `/mail read 1` shows the first page. Omitting the page defaults to page 1.
+
+> **Note:** Reading any page of your mail list marks **all** your mails as read at once. Read/unread status is tracked by a single "last read" timestamp, not per-mail.
+
 **Permission:** `dialogue.command.mail.read`
 
 ---
@@ -57,6 +61,8 @@ Clears all mails from your inbox.
 Toggles message spy mode. When enabled, you can see all private messages sent between other players. Players with the bypass permission are excluded from being spied on.
 
 **Permission:** `dialogue.command.messagespy`
+
+> **Note:** Players who have the `dialogue.command.messagespy` permission are automatically placed into spy mode when they join the server, and removed from spy mode when they leave. Spy mode is therefore session-scoped and always-on by default for permitted players. Using `/messagespy` toggles spy mode off (or back on) for the current session.
 
 ---
 
@@ -118,11 +124,13 @@ All permissions are given to OPs by default. You can grant individual permission
 |---|---|
 | `dialogue.command.message` | Allows using `/message` |
 | `dialogue.command.reply` | Allows using `/reply` |
+| `dialogue.command.mail` | Parent permission for the `/mail` command. |
 | `dialogue.command.mail.send` | Allows using `/mail send` |
 | `dialogue.command.mail.read` | Allows using `/mail read` |
 | `dialogue.command.mail.delete` | Allows using `/mail delete` |
 | `dialogue.command.mail.deleteall` | Allows using `/mail deleteall` |
-| `dialogue.command.messagespy` | Allows using `/messagespy` |
+| `dialogue.command.messagespy` | Allows using `/messagespy` and enables automatic spy mode on join (see above) |
+| `dialogue.command.mailspy` | Parent permission for the `/mailspy` command. |
 | `dialogue.command.mailspy.sent` | Allows using `/mailspy sent` |
 | `dialogue.command.mailspy.received` | Allows using `/mailspy received` |
 | `dialogue.command.mailspy.delete` | Allows using `/mailspy delete` |
