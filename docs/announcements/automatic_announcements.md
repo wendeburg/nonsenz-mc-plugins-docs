@@ -24,7 +24,7 @@ Automatic announcements are scheduled messages that broadcast to all players at 
 |---|---|
 | `%prefix%` | The global prefix defined in `messages.yml` |
 
-PlaceholderAPI placeholders are also supported if PlaceholderAPI is installed.
+PlaceholderAPI placeholders are also supported if PlaceholderAPI is installed. Note that automatic announcements run without a player context, so only server-side (non-player-specific) PlaceholderAPI placeholders will work.
 
 ## Example
 
