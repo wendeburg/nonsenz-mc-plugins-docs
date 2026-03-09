@@ -6,16 +6,10 @@
 
 Reloads all configuration files (`config.yml`, `messages.yml`, `death_messages.yml`).
 
-**Permission:** `customdeathmessages.command.reload`
+**Requires:** OP
 
 ---
 
 ## Permissions
 
-All permissions are given to OPs by default. You can grant individual permissions using a permissions plugin.
-
-### Command Permissions
-
-| Permission | Description |
-|---|---|
-| `customdeathmessages.command.reload` | Allows using `/customdeathmessages reload` |
+All commands require OP. Individual permissions are not supported — use a permissions plugin that allows you to grant OP selectively, or manage access at the server level.
