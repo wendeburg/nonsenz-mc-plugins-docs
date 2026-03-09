@@ -10,15 +10,17 @@ Reloads all configuration files (`automatic_announcements.yml`, `manual_announce
 
 ---
 
-### `/broadcast reload <message>`
+### `/broadcast <message>`
 
 Broadcasts a custom message to all online players. The message supports MiniMessage tags for formatting.
 
 **Permission:** `announcements.command.broadcast`
 **Arguments:** `message` — the text to broadcast (supports MiniMessage tags)
 
+> **Note:** `/broadcast` only supports MiniMessage formatting tags. `%prefix%` and PlaceholderAPI placeholders are not supported.
+
 **Example:**
-- `/broadcast reload <red><bold>Server restarting in 5 minutes!</bold></red>`
+- `/broadcast <red><bold>Server restarting in 5 minutes!</bold></red>`
 
 ---
 
@@ -60,5 +62,5 @@ All permissions are given to OPs by default. You can grant individual permission
 | Permission | Description |
 |---|---|
 | `announcements.command.reload` | Allows using `/announcements reload` |
-| `announcements.command.broadcast` | Allows using `/broadcast reload` to send custom messages |
+| `announcements.command.broadcast` | Allows using `/broadcast` to send custom messages |
 | `announcements.command.announce` | Allows using `/announce` to trigger manual announcements |
