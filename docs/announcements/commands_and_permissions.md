@@ -17,10 +17,10 @@ Broadcasts a custom message to all online players. The message supports MiniMess
 **Permission:** `announcements.command.broadcast`
 **Arguments:** `message` — the text to broadcast (supports MiniMessage tags)
 
-> **Note:** `/broadcast` only supports MiniMessage formatting tags. `%prefix%` and PlaceholderAPI placeholders are not supported.
-
 **Example:**
 - `/broadcast <red><bold>Server restarting in 5 minutes!</bold></red>`
+
+> **Note:** `/broadcast` only supports MiniMessage formatting tags. `%prefix%` and PlaceholderAPI placeholders are not supported.
 
 ---
 
