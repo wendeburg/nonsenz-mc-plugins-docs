@@ -11,7 +11,7 @@ BetterChatFeelings uses two main configuration files for general settings and me
 | `feelings_cooldown` | Integer | `60` | Cooldown in seconds between sending any feeling. Bypassed with the `betterchatfeelings.bypass.cooldown` permission. |
 | `allow_self_feelings` | Boolean | `false` | Whether players can send feelings to themselves. |
 | `log_feelings_to_console` | Boolean | `true` | Whether the global feeling message is logged to the server console. |
-| `only_use_global_messages` | Boolean | `false` | When enabled, only the global message is used for everyone. Sender and receiver specific messages are suppressed. |
+| `only_use_global_messages` | Boolean | `false` | Controls whether sender/receiver-specific messages are used. When `false` (default): sender and receiver are excluded from the global broadcast if they have a dedicated `sender`/`receiver` message — each gets their own message instead. When `true`: only the global message is sent to all players including the sender and receiver; dedicated messages are suppressed. |
 | `sender_text_provider` | String | `"default"` | PlaceholderAPI placeholder string for the sender's display name (e.g., `%luckperms_prefix%%player_name%`). Set to `"default"` to use the raw player name. |
 | `receiver_text_provider` | String | `"default"` | Same as above but for the receiver's display name. |
 | `save_player_data_every_ticks` | Integer | `6000` | How often player data is auto-saved in ticks (6000 ticks = 5 minutes). Set to `0` or a negative number to disable periodic saves. |
@@ -38,27 +38,27 @@ All plugin messages support [MiniMessage](https://docs.advntr.dev/minimessage/fo
 
 | Key | Placeholders | Description |
 |---|---|---|
-| `command_only_usable_players` | `%prefix%` | Shown when a non-player tries to use a player-only command. |
-| `cant_send_feeling_to_self` | `%prefix%` | Shown when a player tries to send a feeling to themselves (if disabled). |
+| `command_only_usable_players` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when a non-player tries to use a player-only command. |
+| `cant_send_feeling_to_self` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when a player tries to send a feeling to themselves (if disabled). |
 | `settings_reloaded` | `%prefix%` | Shown after a successful config reload. |
 | `cant_use_command_on_self` | `%prefix%` | Shown when a player tries to use a command on themselves. |
-| `player_not_found` | `%prefix%` | Shown when the target player is offline or doesn't exist. |
+| `player_not_found` | `%prefix%`, `%feeling_command%`, `%feeling_name%` (only when triggered by a feeling command) | Shown when the target player is offline or doesn't exist. When called via `/bcf ignore`, only `%prefix%` is available — `%feeling_command%` and `%feeling_name%` will appear as literal text if used in this message. |
 | `feeling_not_found` | `%prefix%` | Shown when the specified feeling doesn't exist. |
-| `cant_send_feeling_yet` | `%prefix%`, `%cooldown_left%` | Shown when the player is still on cooldown. |
-| `sender_ignoring_receiver` | `%prefix%`, `%receiver%` | Shown when the sender is ignoring the target player. |
-| `receiver_ignoring_sender` | `%prefix%`, `%receiver%` | Shown when the target player is ignoring the sender. |
-| `sender_has_feelings_disabled` | `%prefix%` | Shown when the sender has all feelings disabled. |
-| `receiver_has_feelings_disabled` | `%prefix%`, `%receiver%` | Shown when the receiver has all feelings disabled. |
-| `sender_has_feeling_disabled` | `%prefix%`, `%feeling_command%` | Shown when the sender has the specific feeling disabled. |
-| `receiver_has_feeling_disabled` | `%prefix%`, `%feeling_command%`, `%receiver%` | Shown when the receiver has the specific feeling disabled. |
+| `cant_send_feeling_yet` | `%prefix%`, `%cooldown_left%`, `%feeling_command%`, `%feeling_name%` | Shown when the player is still on cooldown. |
+| `sender_ignoring_receiver` | `%prefix%`, `%receiver%`, `%feeling_command%`, `%feeling_name%` | Shown when the sender is ignoring the target player. |
+| `receiver_ignoring_sender` | `%prefix%`, `%receiver%`, `%feeling_command%`, `%feeling_name%` | Shown when the target player is ignoring the sender. |
+| `sender_has_feelings_disabled` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when the sender has all feelings disabled. |
+| `receiver_has_feelings_disabled` | `%prefix%`, `%receiver%`, `%feeling_command%`, `%feeling_name%` | Shown when the receiver has all feelings disabled. |
+| `sender_has_feeling_disabled` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when the sender has the specific feeling disabled. |
+| `receiver_has_feeling_disabled` | `%prefix%`, `%feeling_command%`, `%feeling_name%`, `%receiver%` | Shown when the receiver has the specific feeling disabled. |
 | `ignored_player` | `%prefix%`, `%target%` | Shown when a player is added to the ignore list. |
 | `player_already_ignored` | `%prefix%`, `%target%` | Shown when the target is already ignored. |
 | `unignored_player` | `%prefix%`, `%target%` | Shown when a player is removed from the ignore list. |
 | `player_already_unignored` | `%prefix%`, `%target%` | Shown when the target was not being ignored. |
 | `disabled_feelings` | `%prefix%` | Shown when a player disables all feelings. |
 | `enabled_feelings` | `%prefix%` | Shown when a player enables all feelings. |
-| `disabled_feeling` | `%prefix%`, `%feeling_command%` | Shown when a player disables a specific feeling. |
-| `enabled_feeling` | `%prefix%`, `%feeling_command%` | Shown when a player enables a specific feeling. |
+| `disabled_feeling` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when a player disables a specific feeling. |
+| `enabled_feeling` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when a player enables a specific feeling. |
 | `page_does_not_exist` | `%prefix%`, `%total_pages%` | Shown when a player requests a non-existent page in the feelings list. |
 
 ### Feelings List
@@ -68,10 +68,19 @@ The `feelings_list` section controls the layout of the `/feelings` command outpu
 | Sub-key | Placeholders | Description |
 |---|---|---|
 | `empty_list_text` | | Shown when there are no enabled feelings. |
-| `header.default` | `%current_page%`, `%total_pages%` | Header shown on middle pages. |
-| `header.first_page` | `%current_page%`, `%total_pages%` | Header override for the first page. |
-| `header.last_page` | `%current_page%`, `%total_pages%` | Header override for the last page. |
-| `feeling` | `%feeling_command%`, `%feeling_description%`, `%current_page%`, `%total_pages%`, `%next_page%`, `%previous_page%` | Template for each feeling entry row. |
-| `footer.default` | `%current_page%`, `%total_pages%`, `%next_page%`, `%previous_page%` | Footer shown on middle pages. |
-| `footer.first_page` | `%current_page%`, `%total_pages%`, `%next_page%` | Footer override for the first page. |
-| `footer.last_page` | `%current_page%`, `%total_pages%`, `%previous_page%` | Footer override for the last page. |
+| `header.default` | `%current_page%`, `%total_pages%` | A YAML list of strings. Header shown on middle pages. |
+| `header.first_page` | `%current_page%`, `%total_pages%` | A YAML list of strings. Header override for the first page. |
+| `header.last_page` | `%current_page%`, `%total_pages%` | A YAML list of strings. Header override for the last page. |
+| `feeling` | `%feeling_command%`, `%feeling_description%`, `%current_page%`, `%total_pages%`, `%next_page%`, `%previous_page%` | A YAML list of strings. Each list entry is rendered as a separate line for every feeling in the list. |
+| `footer.default` | `%current_page%`, `%total_pages%`, `%next_page%`, `%previous_page%` | A YAML list of strings. Footer shown on middle pages. |
+| `footer.first_page` | `%current_page%`, `%total_pages%`, `%next_page%` | A YAML list of strings. Footer override for the first page. |
+| `footer.last_page` | `%current_page%`, `%total_pages%`, `%previous_page%` | A YAML list of strings. Footer override for the last page. |
+
+---
+
+## Known Limitations & Behavior Notes
+
+- **Cooldown persistence:** Feeling cooldowns are stored in memory only. They reset when the server restarts.
+- **Feelings list page size:** The `/feelings` command displays 7 entries per page. This is not configurable.
+- **Particle spawn position:** Particles always spawn 1 block above the receiver's feet. The `position_offset` values in a feeling's particle config are applied on top of this fixed +1 Y offset.
+- **Player data save on shutdown:** In addition to the periodic save controlled by `save_player_data_every_ticks`, player data is always saved when the server shuts down.

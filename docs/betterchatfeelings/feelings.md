@@ -42,7 +42,6 @@ Messages are nested under the `messages` key of each feeling and support [MiniMe
 |---|---|
 | `%sender%` | The sender's raw username (or PlaceholderAPI-resolved name if configured via `sender_text_provider`). |
 | `%receiver%` | The receiver's raw username (or PlaceholderAPI-resolved name if configured via `receiver_text_provider`). |
-| `%feeling_name%` | The internal YAML key of the feeling (e.g., `hug`). Available in all feeling message types (`sender`, `receiver`, `global`, `discord`). This is the top-level key in `feelings.yml`, used for permissions and player data. |
 
 ## Discord Embed Color
 
