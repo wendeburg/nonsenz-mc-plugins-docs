@@ -24,4 +24,4 @@ Dialogue optionally hooks into the following plugins (soft dependencies):
 |---|---|
 | `config.yml` | General plugin settings (command aliases, mail pagination) |
 | `messages.yml` | All plugin messages and formats (direct messages, mail list display, notifications) |
-| `mails_storage.db` | SQLite database storing all mails and per-player read timestamps. Located at `plugins/Dialogue/mails_storage.db`. |
+| `mails_storage.db` | SQLite database storing all mails data. Located at `plugins/Dialogue/mails_storage.db`. |
