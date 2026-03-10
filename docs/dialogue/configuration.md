@@ -94,8 +94,8 @@ The `mails_list` section controls how the mail list is displayed. It includes he
 
 | Key | Placeholders | Description |
 |---|---|---|
-| `header.default` | `%current_page%`, `%total_pages%` | Header for your own mail list |
-| `header.spy` | `%current_page%`, `%total_pages%`, `%target%`, `%mail_type%` | Header when viewing another player's mails via mailspy |
+| `header.default` | `%prefix%`, `%current_page%`, `%total_pages%` | Header for your own mail list |
+| `header.spy` | `%prefix%`, `%current_page%`, `%total_pages%`, `%target%`, `%mail_type%` | Header when viewing another player's mails via mailspy |
 
 Header values are lists of lines — each item is a separate chat line.
 
@@ -105,9 +105,9 @@ Mail entries are interactive — clicking the delete button removes the mail, an
 
 | Key | Placeholders | Description |
 |---|---|---|
-| `entry.read` | `%mail_id%`, `%sent_at%`, `%sender%`, `%message%` | Format for mails that have been read |
-| `entry.unread` | `%mail_id%`, `%sent_at%`, `%sender%`, `%message%` | Format for unread mails |
-| `entry.spy` | `%mail_id%`, `%sent_at%`, `%sender%`, `%message%` | Format for mails viewed through mailspy |
+| `entry.read` | `%prefix%`, `%mail_id%`, `%sent_at%`, `%sender%`, `%recipient%`, `%message%` | Format for mails that have been read |
+| `entry.unread` | `%prefix%`, `%mail_id%`, `%sent_at%`, `%sender%`, `%recipient%`, `%message%` | Format for unread mails |
+| `entry.spy` | `%prefix%`, `%mail_id%`, `%sent_at%`, `%sender%`, `%recipient%`, `%message%` | Format for mails viewed through mailspy |
 
 Entry values are lists of lines rendered per mail item — each item is a separate chat line.
 
@@ -117,9 +117,9 @@ The footer adapts based on pagination:
 
 | Key | Placeholders | Description |
 |---|---|---|
-| `footer.default` | `%previous_page%`, `%next_page%` | Shown for middle pages (has both previous and next) |
-| `footer.first_page` | `%next_page%` | Shown on the first page (next only) |
-| `footer.last_page` | `%previous_page%` | Shown on the last page (previous only) |
-| `footer.single_page` | — | Shown when there's only one page |
+| `footer.default` | `%prefix%`, `%previous_page%`, `%next_page%` | Shown for middle pages (has both previous and next) |
+| `footer.first_page` | `%prefix%`, `%next_page%` | Shown on the first page (next only) |
+| `footer.last_page` | `%prefix%`, `%previous_page%` | Shown on the last page (previous only) |
+| `footer.single_page` | `%prefix%` | Shown when there's only one page |
 
 Footer values are lists of lines — adding `""` as the last item inserts a trailing blank line.
