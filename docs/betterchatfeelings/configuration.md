@@ -12,8 +12,6 @@ BetterChatFeelings uses two main configuration files for general settings and me
 | `allow_self_feelings` | Boolean | `false` | Whether players can send feelings to themselves. |
 | `log_feelings_to_console` | Boolean | `true` | Whether the global feeling message is logged to the server console. |
 | `only_use_global_messages` | Boolean | `false` | Controls whether sender/receiver-specific messages are used. When `false` (default): sender and receiver are excluded from the global broadcast if they have a dedicated `sender`/`receiver` message — each gets their own message instead. When `true`: only the global message is sent to all players including the sender and receiver; dedicated messages are suppressed. |
-| `sender_text_provider` | String | `"default"` | PlaceholderAPI placeholder string for the sender's display name (e.g., `%luckperms_prefix%%player_name%`). Set to `"default"` to use the raw player name. |
-| `receiver_text_provider` | String | `"default"` | Same as above but for the receiver's display name. |
 | `save_player_data_every_ticks` | Integer | `6000` | How often player data is auto-saved in ticks (6000 ticks = 5 minutes). Set to `0` or a negative number to disable periodic saves. |
 
 ### DiscordSRV Integration
@@ -25,8 +23,22 @@ These settings are nested under `discordsrv_integration` in `settings.yml`.
 | `enabled` | Boolean | `false` | Enable or disable the DiscordSRV integration. |
 | `channel` | String | `""` | The DiscordSRV channel name to post feeling embeds to. |
 | `default_embed_color` | String | `"#3E61FA"` | Default embed color in `#RRGGBB` format. Used when a feeling does not specify its own color. |
-| `sender_text_provider` | String | `"default"` | PlaceholderAPI placeholder for the sender name in Discord messages. |
-| `receiver_text_provider` | String | `"default"` | PlaceholderAPI placeholder for the receiver name in Discord messages. |
+
+---
+
+## PlaceholderAPI Support
+
+If [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) is installed, you can use any PlaceholderAPI placeholder directly inside your feeling message templates in `feelings.yml`. Placeholders are resolved using the **sender** as the player context.
+
+For example, to include the sender's LuckPerms prefix in a message:
+
+```yaml
+sender: "<gold>%luckperms_prefix%%sender% hugs %receiver%!</gold>"
+```
+
+This applies to all message types: `sender`, `receiver`, `global`, and `discord`.
+
+Note: `%sender%` and `%receiver%` are resolved to raw usernames **before** PlaceholderAPI processing.
 
 ---
 
