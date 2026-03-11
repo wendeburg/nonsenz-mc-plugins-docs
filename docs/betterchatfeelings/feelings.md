@@ -40,8 +40,10 @@ Messages are nested under the `messages` key of each feeling and support [MiniMe
 
 | Placeholder | Description |
 |---|---|
-| `%sender%` | The sender's raw username (or PlaceholderAPI-resolved name if configured via `sender_text_provider`). |
-| `%receiver%` | The receiver's raw username (or PlaceholderAPI-resolved name if configured via `receiver_text_provider`). |
+| `%sender%` | The sender's raw username. |
+| `%receiver%` | The receiver's raw username. |
+
+> **PlaceholderAPI support:** If PlaceholderAPI is installed, you can use any PlaceholderAPI placeholder directly in message templates. Placeholders are resolved using the sender as the player context and are applied after `%sender%` and `%receiver%` substitution. See [Configuration](./configuration.md#placeholderapi-support) for details.
 
 ## Discord Embed Color
 
