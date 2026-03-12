@@ -7,7 +7,7 @@ Channels provide scoped chat areas where players can communicate. They are defin
 | Property | Type | Default | Description |
 |---|---|---|---|
 | `name` | String | Required | Display name of the channel |
-| `shortcut` | String | Optional | A single character that, when typed at the start of a message, routes it to this channel (e.g., `!`) |
+| `shortcut` | String | Optional | A string that, when typed at the start of a message, routes it to this channel (e.g., `!`) |
 | `shortcut_commands` | List | Optional | Command aliases that send messages directly to this channel (e.g., `sc`, `staffchat`) |
 | `range` | Integer | `-1` | Maximum distance in blocks for message visibility. `-1` means no distance limit (global) |
 | `format` | String | Required | MiniMessage format string for messages in this channel |
@@ -19,6 +19,12 @@ Channels provide scoped chat areas where players can communicate. They are defin
 
 - `chatty.channel.<channel_id>` — Allows joining and receiving messages from the channel. Also grants access to the channel's shortcut and shortcut commands.
 - `chatty.spy.channel.<channel_id>` — Allows spying on the channel (see messages without joining).
+
+## State Persistence
+
+Channel membership and spy state are **not persisted** between sessions. When a player disconnects:
+- Their active channel is cleared — they return to global chat on next login.
+- Their spy state is cleared — auto-spy re-enables permitted channels on rejoin (see [auto-spy on join](commands_and_permissions.md#channel-spyall)), but any channels they manually un-spied will be active again.
 
 ## Shortcuts
 
@@ -58,7 +64,6 @@ These are available in the `discord_message_format` field:
 | `%discord_member_role_raw%` | The Discord role name (plain, no styling) |
 | `%discord_member_role_color%` | The Discord role color as `#RRGGBB` |
 | `%discord_channel_name%` | The Discord channel name |
-| `%discord_channel_internal_id%` | DiscordSRV's internal channel ID |
 | `%channel_name%` | The Minecraft channel's display name |
 | `%channel_id%` | The Minecraft channel's ID |
 | `%message%` | The message content |

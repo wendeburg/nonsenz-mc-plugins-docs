@@ -52,4 +52,4 @@ All system messages the plugin sends to players. Every message supports MiniMess
 | `spying_channel` | `%channel_name%`, `%channel_id%`, `%player_name%`, `%player_display_name%` | Confirmation after enabling spy on a specific channel |
 | `stopped_spying_channel` | `%channel_name%`, `%channel_id%`, `%player_name%`, `%player_display_name%` | Confirmation after disabling spy on a specific channel |
 | `channel_spy_format` | `%message%`, `%channel_name%`, `%channel_id%`, `%player_name%`, `%player_display_name%` | Format used to display spied channel messages |
-| `channel_spy_format_discord_message` | `%discord_channel_name%`, `%discord_member_name%`, `%message%`, `%channel_name%`, `%channel_id%` | Format used to display spied Discord messages |
+| `channel_spy_format_discord_message` | `%discord_channel_name%`, `%discord_member_name%`, `%discord_member_role%`, `%discord_member_role_raw%`, `%message%`, `%channel_name%`, `%channel_id%` | Format used to display spied Discord messages |

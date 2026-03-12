@@ -42,6 +42,8 @@ Toggles spying on all channels you have permission to spy on.
 
 **Permission:** `chatty.command.channel.spy`
 
+> **Auto-spy on join:** Players automatically begin spying on every channel they have `chatty.spy.channel.<channel_id>` permission for when they join the server. This mirrors the effect of `/channel spyall` and does not require players to opt in manually.
+
 ---
 
 ### Shortcut Commands

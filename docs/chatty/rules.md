@@ -20,13 +20,16 @@ Each rule can be bypassed with the permission `chatty.rule.bypass.<rule_name>`, 
 
 ## How Rules Work
 
+All rules in `rules.yml` are evaluated against every message — not just the first matching one. Multiple rules can trigger on the same message, and their actions all execute.
+
+For each rule:
 1. Each condition is tested as a regex pattern against the message.
 2. If any condition matches, the rule triggers.
 3. All configured actions execute:
    - The matched text is replaced with `replace_with` (if set).
    - The message is cancelled if `cancel_message` is `true`.
    - Console and player commands are executed.
-4. Commands support the `%player_name%` placeholder.
+4. Commands support the `%player_name%` placeholder and any PlaceholderAPI placeholders (e.g. `%vault_prefix%`).
 
 A rule must define at least one action (`cancel_message`, `replace_with`, `console_commands`, or `player_commands`).
 
