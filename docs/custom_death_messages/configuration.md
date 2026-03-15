@@ -15,7 +15,7 @@ General plugin settings.
 
 ## messages.yml
 
-All system messages the plugin sends to players. Every message supports MiniMessage tags for formatting.
+All system messages the plugin sends to players. Every message supports MiniMessage tags for formatting. The `%prefix%` placeholder is available in every message and is replaced with the value of the `prefix` key.
 
 ### Messages Reference
 

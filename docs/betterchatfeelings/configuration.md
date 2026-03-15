@@ -50,28 +50,28 @@ All plugin messages support [MiniMessage](https://docs.advntr.dev/minimessage/fo
 
 | Key | Placeholders | Description |
 |---|---|---|
-| `command_only_usable_players` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when a non-player tries to use a player-only command. |
-| `cant_send_feeling_to_self` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when a player tries to send a feeling to themselves (if disabled). |
-| `settings_reloaded` | `%prefix%` | Shown after a successful config reload. |
-| `cant_use_command_on_self` | `%prefix%` | Shown when a player tries to use a command on themselves. |
-| `player_not_found` | `%prefix%`, `%feeling_command%`, `%feeling_name%` (only when triggered by a feeling command) | Shown when the target player is offline or doesn't exist. When called via `/bcf ignore`, only `%prefix%` is available — `%feeling_command%` and `%feeling_name%` will appear as literal text if used in this message. |
-| `feeling_not_found` | `%prefix%` | Shown when the specified feeling doesn't exist. |
-| `cant_send_feeling_yet` | `%prefix%`, `%cooldown_left%`, `%feeling_command%`, `%feeling_name%` | Shown when the player is still on cooldown. |
-| `sender_ignoring_receiver` | `%prefix%`, `%receiver%`, `%feeling_command%`, `%feeling_name%` | Shown when the sender is ignoring the target player. |
-| `receiver_ignoring_sender` | `%prefix%`, `%receiver%`, `%feeling_command%`, `%feeling_name%` | Shown when the target player is ignoring the sender. |
-| `sender_has_feelings_disabled` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when the sender has all feelings disabled. |
-| `receiver_has_feelings_disabled` | `%prefix%`, `%receiver%`, `%feeling_command%`, `%feeling_name%` | Shown when the receiver has all feelings disabled. |
-| `sender_has_feeling_disabled` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when the sender has the specific feeling disabled. |
-| `receiver_has_feeling_disabled` | `%prefix%`, `%feeling_command%`, `%feeling_name%`, `%receiver%` | Shown when the receiver has the specific feeling disabled. |
-| `ignored_player` | `%prefix%`, `%target%` | Shown when a player is added to the ignore list. |
-| `player_already_ignored` | `%prefix%`, `%target%` | Shown when the target is already ignored. |
-| `unignored_player` | `%prefix%`, `%target%` | Shown when a player is removed from the ignore list. |
-| `player_already_unignored` | `%prefix%`, `%target%` | Shown when the target was not being ignored. |
-| `disabled_feelings` | `%prefix%` | Shown when a player disables all feelings. |
-| `enabled_feelings` | `%prefix%` | Shown when a player enables all feelings. |
-| `disabled_feeling` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when a player disables a specific feeling. |
-| `enabled_feeling` | `%prefix%`, `%feeling_command%`, `%feeling_name%` | Shown when a player enables a specific feeling. |
-| `page_does_not_exist` | `%prefix%`, `%total_pages%` | Shown when a player requests a non-existent page in the feelings list. |
+| `command_only_usable_players` | `%feeling_command%`, `%feeling_name%` | Shown when a non-player tries to use a player-only command. |
+| `cant_send_feeling_to_self` | `%feeling_command%`, `%feeling_name%` | Shown when a player tries to send a feeling to themselves (if disabled). |
+| `settings_reloaded` | — | Shown after a successful config reload. |
+| `cant_use_command_on_self` | — | Shown when a player tries to use a command on themselves. |
+| `player_not_found` | `%feeling_command%`, `%feeling_name%` (only when triggered by a feeling command) | Shown when the target player is offline or doesn't exist. When called via `/bcf ignore`, only `%prefix%` is available — `%feeling_command%` and `%feeling_name%` will appear as literal text if used in this message. |
+| `feeling_not_found` | — | Shown when the specified feeling doesn't exist. |
+| `cant_send_feeling_yet` | `%cooldown_left%`, `%feeling_command%`, `%feeling_name%` | Shown when the player is still on cooldown. |
+| `sender_ignoring_receiver` | `%receiver%`, `%feeling_command%`, `%feeling_name%` | Shown when the sender is ignoring the target player. |
+| `receiver_ignoring_sender` | `%receiver%`, `%feeling_command%`, `%feeling_name%` | Shown when the target player is ignoring the sender. |
+| `sender_has_feelings_disabled` | `%feeling_command%`, `%feeling_name%` | Shown when the sender has all feelings disabled. |
+| `receiver_has_feelings_disabled` | `%receiver%`, `%feeling_command%`, `%feeling_name%` | Shown when the receiver has all feelings disabled. |
+| `sender_has_feeling_disabled` | `%feeling_command%`, `%feeling_name%` | Shown when the sender has the specific feeling disabled. |
+| `receiver_has_feeling_disabled` | `%feeling_command%`, `%feeling_name%`, `%receiver%` | Shown when the receiver has the specific feeling disabled. |
+| `ignored_player` | `%target%` | Shown when a player is added to the ignore list. |
+| `player_already_ignored` | `%target%` | Shown when the target is already ignored. |
+| `unignored_player` | `%target%` | Shown when a player is removed from the ignore list. |
+| `player_already_unignored` | `%target%` | Shown when the target was not being ignored. |
+| `disabled_feelings` | — | Shown when a player disables all feelings. |
+| `enabled_feelings` | — | Shown when a player enables all feelings. |
+| `disabled_feeling` | `%feeling_command%`, `%feeling_name%` | Shown when a player disables a specific feeling. |
+| `enabled_feeling` | `%feeling_command%`, `%feeling_name%` | Shown when a player enables a specific feeling. |
+| `page_does_not_exist` | `%total_pages%` | Shown when a player requests a non-existent page in the feelings list. |
 
 ### Feelings List
 

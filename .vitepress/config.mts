@@ -56,6 +56,14 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Commands Filter',
+        items: [
+          { text: 'Overview', link: '/docs/commands_filter/overview' },
+          { text: 'Configuration', link: '/docs/commands_filter/configuration' },
+          { text: 'Commands & Permissions', link: '/docs/commands_filter/commands_and_permissions' },
+        ]
+      },
+      {
         text: 'Dialogue',
         items: [
           { text: 'Overview', link: '/docs/dialogue/overview' },
