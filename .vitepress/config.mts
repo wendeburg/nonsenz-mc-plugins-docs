@@ -71,6 +71,14 @@ export default defineConfig({
           { text: 'Commands & Permissions', link: '/docs/dialogue/commands_and_permissions' },
         ]
       },
+      {
+        text: 'TempFly',
+        items: [
+          { text: 'Overview', link: '/docs/tempfly/overview' },
+          { text: 'Configuration', link: '/docs/tempfly/configuration' },
+          { text: 'Commands & Permissions', link: '/docs/tempfly/commands_and_permissions' },
+        ]
+      },
     ],
 
     footer: {

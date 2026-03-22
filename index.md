@@ -36,5 +36,8 @@ features:
   - title: CommandsFilter
     details: A command visibility and access control plugin for Paper servers (1.21+). It lets you control which commands players can see in tab-completion and optionally block them from executing filtered commands, based on their permission group.
     link: /docs/commands_filter/overview
+  - title: TempFly
+    details: A temporary flight plugin for Paper servers (1.21+). It lets you grant players a limited amount of flight time that counts down while airborne, with configurable world restrictions, action bar display, and safe landing when time expires.
+    link: /docs/tempfly/overview
 ---
 
