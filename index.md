@@ -39,5 +39,8 @@ features:
   - title: TempFly
     details: A temporary flight plugin for Paper servers (1.21+). It lets you grant players a limited amount of flight time that counts down while airborne, with configurable world restrictions, action bar display, and safe landing when time expires.
     link: /docs/tempfly/overview
+  - title: BlockPlacementLimiter
+    details: A block placement control plugin for Paper servers (1.21+). It lets you define per-player limits on how many blocks of specific types can be placed, and restrict certain blocks from being placed in specific worlds entirely.
+    link: /docs/block_placement_limiter/overview
 ---
 

@@ -79,6 +79,14 @@ export default defineConfig({
           { text: 'Commands & Permissions', link: '/docs/tempfly/commands_and_permissions' },
         ]
       },
+      {
+        text: 'BlockPlacementLimiter',
+        items: [
+          { text: 'Overview', link: '/docs/block_placement_limiter/overview' },
+          { text: 'Configuration', link: '/docs/block_placement_limiter/configuration' },
+          { text: 'Commands & Permissions', link: '/docs/block_placement_limiter/commands_and_permissions' },
+        ]
+      },
     ],
 
     footer: {
