@@ -30,7 +30,7 @@ features:
   - title: BetterChatFeelings
     details: A chat emote plugin for Paper 1.21+ servers that lets players send customizable "feelings" (social interactions like hugs, pokes, etc.) to other players.
     link: /docs/betterchatfeelings/overview
-  - title: Custom Death Messages
+  - title: CustomDeathMessages
     details: A death message customization plugin for Paper servers (1.21+). It lets you define custom death messages based on the type of damage and the entity that caused the kill, with full MiniMessage formatting support.
     link: /docs/custom_death_messages/overview
   - title: CommandsFilter
