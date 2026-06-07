@@ -21,8 +21,8 @@ All system messages the plugin sends to players. Every message supports MiniMess
 
 | Key | Placeholders | Description |
 |---|---|---|
-| `prefix` | — | Global prefix referenced by other messages via `%prefix%` |
-| `plugin_reloaded` | — | Confirmation sent after reloading the plugin |
+| `prefix` | - | Global prefix referenced by other messages via `%prefix%` |
+| `plugin_reloaded` | - | Confirmation sent after reloading the plugin |
 
 ---
 

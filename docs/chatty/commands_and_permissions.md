@@ -15,7 +15,7 @@ Reloads all configuration files (`config.yml`, `formats.yml`, `channels.yml`, `r
 Joins a channel or switches to it if you're already in a different channel. Tab completion suggests channels you have permission to join.
 
 **Permission:** `chatty.command.channel.join`
-**Arguments:** `channel_id` — the channel's ID as defined in `channels.yml`
+**Arguments:** `channel_id` - the channel's ID as defined in `channels.yml`
 
 ---
 
@@ -32,7 +32,7 @@ Leaves your current channel, returning you to global chat.
 Toggles spying on a specific channel. When spying, you can see messages sent in that channel without being a member. Tab completion suggests channels you have permission to spy on.
 
 **Permission:** `chatty.command.channel.spy`
-**Arguments:** `channel_id` — the channel to spy on
+**Arguments:** `channel_id` - the channel to spy on
 
 ---
 
@@ -75,7 +75,7 @@ All permissions are given to OPs by default. You can grant individual permission
 
 | Permission | Description |
 |---|---|
-| `chatty.channel.<channel_id>` | Grants access to a channel — allows joining, receiving messages, and using the channel's shortcut and shortcut commands |
+| `chatty.channel.<channel_id>` | Grants access to a channel - allows joining, receiving messages, and using the channel's shortcut and shortcut commands |
 | `chatty.spy.channel.<channel_id>` | Allows spying on a channel (viewing messages without joining) |
 
 ### Format Permissions

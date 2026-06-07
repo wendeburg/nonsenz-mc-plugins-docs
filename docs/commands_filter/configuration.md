@@ -22,7 +22,7 @@ The plugin resolves a player's group by checking `group.<group_name>` permission
 
 **Whitelist mode:** Higher-priority groups automatically inherit all commands from lower-priority groups. You only need to list commands that are exclusive to each group. If a group has an empty list, it inherits the full list of the next lower-priority group.
 
-**Blacklist mode:** Each group has its own independent blacklist. An empty list means no commands are blocked for that group — there is no inheritance between groups.
+**Blacklist mode:** Each group has its own independent blacklist. An empty list means no commands are blocked for that group - there is no inheritance between groups.
 
 **Example:** With groups `[owner, admin, member]` in whitelist mode:
 - `member` can see commands defined under `member`

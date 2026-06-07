@@ -4,7 +4,7 @@ Chat formats control how player messages appear in global chat (outside of chann
 
 ## How It Works
 
-- Each format has a **priority** — the format with the highest priority that the player has permission for is used.
+- Each format has a **priority** - the format with the highest priority that the player has permission for is used.
 - The `default` format is required and applies to all players without needing a permission.
 - Other formats require the permission `chatty.format.<format_name>`.
 
@@ -48,7 +48,7 @@ PlaceholderAPI placeholders are also supported if PlaceholderAPI is installed.
 ## Example
 
 ```yaml
-# No permission needed — applies to all players
+# No permission needed - applies to all players
 default:
   priority: 0
   prefix:

@@ -10,7 +10,7 @@ BlockPlacementLimiter is a block placement control plugin for Paper servers (1.2
 
 - **Accurate Placement Tracking**: Counts decrease when a block is broken. The plugin also handles piston movement, explosions, shearing, and entity-triggered block changes to keep counts consistent.
 
-- **Configurable Messaging**: Feedback on placement, removal, limit reached, and world restrictions can be sent via action bar, chat, or both — each individually toggleable.
+- **Configurable Messaging**: Feedback on placement, removal, limit reached, and world restrictions can be sent via action bar, chat, or both - each individually toggleable.
 
 - **Data Persistence**: Per-player placement data survives server restarts. Data is validated on load against the current limit configuration and saved on shutdown (and periodically, if configured).
 

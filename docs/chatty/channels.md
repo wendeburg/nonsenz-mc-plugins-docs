@@ -17,29 +17,29 @@ Channels provide scoped chat areas where players can communicate. They are defin
 
 ## Permissions
 
-- `chatty.channel.<channel_id>` — Allows joining and receiving messages from the channel. Also grants access to the channel's shortcut and shortcut commands.
-- `chatty.spy.channel.<channel_id>` — Allows spying on the channel (see messages without joining).
+- `chatty.channel.<channel_id>` - Allows joining and receiving messages from the channel. Also grants access to the channel's shortcut and shortcut commands.
+- `chatty.spy.channel.<channel_id>` - Allows spying on the channel (see messages without joining).
 
 ## State Persistence
 
 Channel membership and spy state are **not persisted** between sessions. When a player disconnects:
-- Their active channel is cleared — they return to global chat on next login.
-- Their spy state is cleared — auto-spy re-enables permitted channels on rejoin (see [auto-spy on join](commands_and_permissions.md#channel-spyall)), but any channels they manually un-spied will be active again.
+- Their active channel is cleared - they return to global chat on next login.
+- Their spy state is cleared - auto-spy re-enables permitted channels on rejoin (see [auto-spy on join](commands_and_permissions.md#channel-spyall)), but any channels they manually un-spied will be active again.
 
 ## Shortcuts
 
 There are two ways to quickly send messages to a channel without joining it:
 
-1. **Shortcut prefix** — Type the shortcut character at the start of your message. For example, if `staff_chat` has shortcut `!`, typing `!hello` sends "hello" to the staff chat.
-2. **Shortcut commands** — Use a command alias. For example, `/sc hello` or `/staffchat hello` sends "hello" to the staff chat.
+1. **Shortcut prefix** - Type the shortcut character at the start of your message. For example, if `staff_chat` has shortcut `!`, typing `!hello` sends "hello" to the staff chat.
+2. **Shortcut commands** - Use a command alias. For example, `/sc hello` or `/staffchat hello` sends "hello" to the staff chat.
 
 ## Range & Visibility
 
-- **Range `-1`** — Messages reach all players (global).
-- **Range `> 0`** — Only players within the specified number of blocks can see the message.
-- **`same_world: true`** — Restricts visibility to players in the sender's world.
-- **`always_visible: true`** — Players with the channel permission see messages even if they haven't joined the channel.
-- **`always_visible: false`** — Only players who have explicitly joined the channel see messages.
+- **Range `-1`** - Messages reach all players (global).
+- **Range `> 0`** - Only players within the specified number of blocks can see the message.
+- **`same_world: true`** - Restricts visibility to players in the sender's world.
+- **`always_visible: true`** - Players with the channel permission see messages even if they haven't joined the channel.
+- **`always_visible: false`** - Only players who have explicitly joined the channel see messages.
 
 ## Placeholders
 

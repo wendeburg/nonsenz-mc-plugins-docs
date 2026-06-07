@@ -32,20 +32,20 @@ All messages support [MiniMessage](https://docs.advntr.dev/minimessage/format.ht
 
 | Key | Placeholders | Description |
 |---|---|---|
-| `prefix` | — | Plugin prefix prepended to most messages. |
-| `fly-enabled` | — | Shown to the player when they enable flight with `/fly`. |
-| `fly-disabled` | — | Shown to the player when they disable flight with `/fly`. |
-| `fly-no-time` | — | Shown when a player tries to enable flight but has no remaining time. |
-| `fly-disabled-world` | — | Shown when a player tries to enable flight in a disabled world. |
-| `fly-enabled-world` | — | Shown when a player's flight is re-enabled after leaving a disabled world. |
-| `fly-survival-only` | — | Shown when a player tries to use `/fly` outside of Survival mode. |
-| `unlimited-text` | — | Text used to represent unlimited flight time (used in the action bar). |
+| `prefix` | - | Plugin prefix prepended to most messages. |
+| `fly-enabled` | - | Shown to the player when they enable flight with `/fly`. |
+| `fly-disabled` | - | Shown to the player when they disable flight with `/fly`. |
+| `fly-no-time` | - | Shown when a player tries to enable flight but has no remaining time. |
+| `fly-disabled-world` | - | Shown when a player tries to enable flight in a disabled world. |
+| `fly-enabled-world` | - | Shown when a player's flight is re-enabled after leaving a disabled world. |
+| `fly-survival-only` | - | Shown when a player tries to use `/fly` outside of Survival mode. |
+| `unlimited-text` | - | Text used to represent unlimited flight time (used in the action bar). |
 | `action-bar` | `<time>` | Action bar message shown while flight is active. `<time>` is replaced with the formatted remaining time or the `unlimited-text` value. |
 | `give-success` | `<player>`, `<amount>`, `<total>` | Shown to the admin after adding time to a player. `<amount>` is the added seconds; `<total>` is the new total. |
 | `give-subtract` | `<player>`, `<amount>`, `<total>` | Shown to the admin after subtracting time from a player. `<amount>` is the absolute value subtracted; `<total>` is the new total. |
 | `set-success` | `<player>`, `<amount>` | Shown to the admin after setting a player's flight time. `<amount>` is the new value in seconds. |
-| `player-not-found` | — | Shown when the specified player cannot be found. |
-| `reload-success` | — | Shown after a successful `/tempfly reload`. |
+| `player-not-found` | - | Shown when the specified player cannot be found. |
+| `reload-success` | - | Shown after a successful `/tempfly reload`. |
 
 ### Time Format
 

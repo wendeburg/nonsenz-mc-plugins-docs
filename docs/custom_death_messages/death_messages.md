@@ -23,10 +23,10 @@ Death messages are custom messages displayed when a player is killed. They are d
 
 The `damage_types` and `causing_entity` fields use pattern matching with wildcard support:
 
-- **Exact match** — `PLAYER_ATTACK` matches only the `PLAYER_ATTACK` damage type.
-- **Wildcard** — `PLAYER*` matches any value starting with `PLAYER` (e.g. `PLAYER_ATTACK`, `PLAYER_EXPLOSION`).
-- **Full wildcard** — `*` matches any value. For `causing_entity`, this matches only deaths **with** a killing entity — it does not match environmental deaths.
-- **No entity** — `NONE` matches deaths with **no** killing entity (fall, drowning, lava, etc.).
+- **Exact match** - `PLAYER_ATTACK` matches only the `PLAYER_ATTACK` damage type.
+- **Wildcard** - `PLAYER*` matches any value starting with `PLAYER` (e.g. `PLAYER_ATTACK`, `PLAYER_EXPLOSION`).
+- **Full wildcard** - `*` matches any value. For `causing_entity`, this matches only deaths **with** a killing entity - it does not match environmental deaths.
+- **No entity** - `NONE` matches deaths with **no** killing entity (fall, drowning, lava, etc.).
 
 If `causing_entity` is omitted entirely, the entry matches regardless of whether a killing entity is present.
 
@@ -94,7 +94,7 @@ undead_kills:
   message:
     - "<gray>%player% was slain by a %killer%</gray>"
 
-# Catch-all — matches any remaining death regardless of entity
+# Catch-all - matches any remaining death regardless of entity
 catch_all:
   damage_types:
     - "*"

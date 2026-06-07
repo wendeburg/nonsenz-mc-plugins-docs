@@ -93,7 +93,7 @@ All messages support [MiniMessage](https://docs.advntr.dev/minimessage/format.ht
 
 | Key | Placeholders | Description |
 |---|---|---|
-| `plugin_prefix` | — | Plugin prefix prepended to all messages. |
+| `plugin_prefix` | - | Plugin prefix prepended to all messages. |
 | `world_placement_restriction_chat_message` | `%prefix%`, `%block_name%`, `%block_id%`, `%world%`, `%player_name%` | Chat message when placement is blocked by a world restriction. |
 | `world_placement_restriction_actionbar_message` | `%prefix%`, `%block_name%`, `%block_id%`, `%world%`, `%player_name%` | Action bar version of the world restriction message. |
 | `placed_block_chat_message` | `%prefix%`, `%block_name%`, `%block_id%`, `%player_total_blocks_count%`, `%limit%`, `%player_block_count%`, `%worlds%`, `%player_name%` | Chat message on successful tracked block placement. |

@@ -11,7 +11,7 @@ BetterChatFeelings uses two main configuration files for general settings and me
 | `feelings_cooldown` | Integer | `60` | Cooldown in seconds between sending any feeling. Bypassed with the `betterchatfeelings.bypass.cooldown` permission. |
 | `allow_self_feelings` | Boolean | `false` | Whether players can send feelings to themselves. |
 | `log_feelings_to_console` | Boolean | `true` | Whether the global feeling message is logged to the server console. |
-| `only_use_global_messages` | Boolean | `false` | Controls whether sender/receiver-specific messages are used. When `false` (default): sender and receiver are excluded from the global broadcast if they have a dedicated `sender`/`receiver` message — each gets their own message instead. When `true`: only the global message is sent to all players including the sender and receiver; dedicated messages are suppressed. |
+| `only_use_global_messages` | Boolean | `false` | Controls whether sender/receiver-specific messages are used. When `false` (default): sender and receiver are excluded from the global broadcast if they have a dedicated `sender`/`receiver` message - each gets their own message instead. When `true`: only the global message is sent to all players including the sender and receiver; dedicated messages are suppressed. |
 | `save_player_data_every_ticks` | Integer | `6000` | How often player data is auto-saved in ticks (6000 ticks = 5 minutes). Set to `0` or a negative number to disable periodic saves. |
 
 ### DiscordSRV Integration
@@ -52,10 +52,10 @@ All plugin messages support [MiniMessage](https://docs.advntr.dev/minimessage/fo
 |---|---|---|
 | `command_only_usable_players` | `%feeling_command%`, `%feeling_name%` | Shown when a non-player tries to use a player-only command. |
 | `cant_send_feeling_to_self` | `%feeling_command%`, `%feeling_name%` | Shown when a player tries to send a feeling to themselves (if disabled). |
-| `settings_reloaded` | — | Shown after a successful config reload. |
-| `cant_use_command_on_self` | — | Shown when a player tries to use a command on themselves. |
-| `player_not_found` | `%feeling_command%`, `%feeling_name%` (only when triggered by a feeling command) | Shown when the target player is offline or doesn't exist. When called via `/bcf ignore`, only `%prefix%` is available — `%feeling_command%` and `%feeling_name%` will appear as literal text if used in this message. |
-| `feeling_not_found` | — | Shown when the specified feeling doesn't exist. |
+| `settings_reloaded` | - | Shown after a successful config reload. |
+| `cant_use_command_on_self` | - | Shown when a player tries to use a command on themselves. |
+| `player_not_found` | `%feeling_command%`, `%feeling_name%` (only when triggered by a feeling command) | Shown when the target player is offline or doesn't exist. When called via `/bcf ignore`, only `%prefix%` is available - `%feeling_command%` and `%feeling_name%` will appear as literal text if used in this message. |
+| `feeling_not_found` | - | Shown when the specified feeling doesn't exist. |
 | `cant_send_feeling_yet` | `%cooldown_left%`, `%feeling_command%`, `%feeling_name%` | Shown when the player is still on cooldown. |
 | `sender_ignoring_receiver` | `%receiver%`, `%feeling_command%`, `%feeling_name%` | Shown when the sender is ignoring the target player. |
 | `receiver_ignoring_sender` | `%receiver%`, `%feeling_command%`, `%feeling_name%` | Shown when the target player is ignoring the sender. |
@@ -67,8 +67,8 @@ All plugin messages support [MiniMessage](https://docs.advntr.dev/minimessage/fo
 | `player_already_ignored` | `%target%` | Shown when the target is already ignored. |
 | `unignored_player` | `%target%` | Shown when a player is removed from the ignore list. |
 | `player_already_unignored` | `%target%` | Shown when the target was not being ignored. |
-| `disabled_feelings` | — | Shown when a player disables all feelings. |
-| `enabled_feelings` | — | Shown when a player enables all feelings. |
+| `disabled_feelings` | - | Shown when a player disables all feelings. |
+| `enabled_feelings` | - | Shown when a player enables all feelings. |
 | `disabled_feeling` | `%feeling_command%`, `%feeling_name%` | Shown when a player disables a specific feeling. |
 | `enabled_feeling` | `%feeling_command%`, `%feeling_name%` | Shown when a player enables a specific feeling. |
 | `page_does_not_exist` | `%total_pages%` | Shown when a player requests a non-existent page in the feelings list. |

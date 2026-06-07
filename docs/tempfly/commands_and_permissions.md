@@ -31,8 +31,8 @@ Adds or subtracts flight time from a player. Use a positive number to add time a
 The `<player>` argument tab-completes with online player names.
 
 **Examples:**
-- `/tempfly modify Steve 300` — adds 300 seconds to Steve's flight time
-- `/tempfly modify Steve -60` — subtracts 60 seconds from Steve's flight time
+- `/tempfly modify Steve 300` - adds 300 seconds to Steve's flight time
+- `/tempfly modify Steve -60` - subtracts 60 seconds from Steve's flight time
 
 ---
 

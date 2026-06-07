@@ -4,10 +4,10 @@ Announcements is a broadcast plugin for Paper servers (1.21+). It lets you set u
 
 ## Features
 
-- **Automatic Announcements** — Schedule recurring messages with configurable intervals, delays, and random or sequential ordering. See [Automatic Announcements](automatic_announcements.md).
-- **Manual Announcements** — Trigger predefined announcements via commands, with optional sound effects and custom arguments. See [Manual Announcements](manual_announcements.md).
-- **Broadcast Command** — Send a one-off formatted message to all players instantly.
-- **Commands & Permissions** — Control who can reload the plugin, broadcast messages, and trigger announcements. See [Commands & Permissions](commands_and_permissions.md).
+- **Automatic Announcements** - Schedule recurring messages with configurable intervals, delays, and random or sequential ordering. See [Automatic Announcements](automatic_announcements.md).
+- **Manual Announcements** - Trigger predefined announcements via commands, with optional sound effects and custom arguments. See [Manual Announcements](manual_announcements.md).
+- **Broadcast Command** - Send a one-off formatted message to all players instantly.
+- **Commands & Permissions** - Control who can reload the plugin, broadcast messages, and trigger announcements. See [Commands & Permissions](commands_and_permissions.md).
 
 ## Integrations
 

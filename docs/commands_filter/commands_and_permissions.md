@@ -18,5 +18,5 @@ All permissions are given to OPs by default. You can grant individual permission
 | Permission | Description |
 |---|---|
 | `commandsfilter.command.reload` | Allows using `/commandsfilter reload` |
-| `commandsfilter.bypass.filters_list` | Bypasses command list filtering — the player sees all commands in tab-completion and can use any command regardless of filter mode |
-| `commandsfilter.bypass.hidenamespacedcommands` | Bypasses the `hide_namespaced_commands` setting — the player sees namespaced command variants in tab-completion |
+| `commandsfilter.bypass.filters_list` | Bypasses command list filtering - the player sees all commands in tab-completion and can use any command regardless of filter mode |
+| `commandsfilter.bypass.hidenamespacedcommands` | Bypasses the `hide_namespaced_commands` setting - the player sees namespaced command variants in tab-completion |

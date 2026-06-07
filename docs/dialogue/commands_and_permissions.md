@@ -22,7 +22,7 @@ Replies to the last player who messaged you or the last player you messaged. Wor
 
 ### `/mail send <player> <message>`
 
-Sends a mail to any player. The recipient does not need to be online — mails are stored persistently and can be read later.
+Sends a mail to any player. The recipient does not need to be online - mails are stored persistently and can be read later.
 
 **Permission:** `dialogue.command.mail.send`
 
@@ -32,7 +32,7 @@ Sends a mail to any player. The recipient does not need to be online — mails a
 
 Displays your received mails in a paginated list. Unread mails are highlighted differently from read mails. Each entry has a clickable delete button.
 
-The `[page]` argument is 1-indexed — `/mail read 1` shows the first page. Omitting the page defaults to page 1.
+The `[page]` argument is 1-indexed - `/mail read 1` shows the first page. Omitting the page defaults to page 1.
 
 > **Note:** Reading any page of your mail list marks **all** your mails as read at once. Read/unread status is tracked by a single "last read" timestamp, not per-mail.
 

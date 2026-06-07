@@ -15,7 +15,7 @@ Reloads all configuration files (`automatic_announcements.yml`, `manual_announce
 Broadcasts a custom message to all online players. The message supports MiniMessage tags for formatting.
 
 **Permission:** `announcements.command.broadcast`
-**Arguments:** `message` — the text to broadcast (supports MiniMessage tags)
+**Arguments:** `message` - the text to broadcast (supports MiniMessage tags)
 
 **Example:**
 - `/broadcast <red><bold>Server restarting in 5 minutes!</bold></red>`
@@ -30,8 +30,8 @@ Triggers a manual announcement without a player context. The announcement is bro
 
 **Permission:** `announcements.command.announce`
 **Arguments:**
-- `announcement` — the announcement ID as defined in `manual_announcements.yml` (tab-completable)
-- `extra_arguments` — optional `key:value` pairs separated by spaces, used to fill `%args_<key>%` placeholders
+- `announcement` - the announcement ID as defined in `manual_announcements.yml` (tab-completable)
+- `extra_arguments` - optional `key:value` pairs separated by spaces, used to fill `%args_<key>%` placeholders
 
 **Example:**
 - `/announce welcome_back noplayer`
@@ -45,9 +45,9 @@ Triggers a manual announcement with a player context. This allows PlaceholderAPI
 
 **Permission:** `announcements.command.announce`
 **Arguments:**
-- `announcement` — the announcement ID as defined in `manual_announcements.yml` (tab-completable)
-- `player` — an online player's name (tab-completable), used as context for PlaceholderAPI placeholders
-- `extra_arguments` — optional `key:value` pairs separated by spaces, used to fill `%args_<key>%` placeholders
+- `announcement` - the announcement ID as defined in `manual_announcements.yml` (tab-completable)
+- `player` - an online player's name (tab-completable), used as context for PlaceholderAPI placeholders
+- `extra_arguments` - optional `key:value` pairs separated by spaces, used to fill `%args_<key>%` placeholders
 
 **Example:**
 - `/announce player_join withplayer Steve`

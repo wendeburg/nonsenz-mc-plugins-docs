@@ -36,15 +36,15 @@ All system messages the plugin sends to players. Every message supports MiniMess
 
 | Key | Placeholders | Description |
 |---|---|---|
-| `prefix` | — | Global prefix referenced by other messages via `%prefix%` |
-| `command_only_usable_by_player` | — | Shown when the console tries to run a player-only command |
+| `prefix` | - | Global prefix referenced by other messages via `%prefix%` |
+| `command_only_usable_by_player` | - | Shown when the console tries to run a player-only command |
 | `plugin_reloaded` | `%player_name%`, `%player_display_name%` | Confirmation after reloading the plugin |
 | `player_not_in_channel` | `%channel_name%`, `%channel_id%`, `%player_name%`, `%player_display_name%` | Shown when a player tries to leave but isn't in a channel |
 | `joined_channel` | `%channel_name%`, `%channel_id%`, `%player_name%`, `%player_display_name%` | Confirmation after joining a channel |
 | `switched_channel` | `%channel_name%`, `%channel_id%`, `%player_name%`, `%player_display_name%` | Confirmation after switching channels |
 | `left_channel` | `%channel_name%`, `%channel_id%`, `%player_name%`, `%player_display_name%` | Confirmation after leaving a channel |
 | `no_permission_to_join_channel` | `%channel_name%`, `%channel_id%`, `%player_name%`, `%player_display_name%` | Shown when the player lacks permission to join |
-| `non_existent_channel` | — | Shown when the specified channel doesn't exist |
+| `non_existent_channel` | - | Shown when the specified channel doesn't exist |
 | `already_in_channel` | `%channel_name%`, `%channel_id%`, `%player_name%`, `%player_display_name%` | Shown when the player is already in the target channel |
 | `no_permission_to_spy_channel` | `%channel_name%`, `%channel_id%`, `%player_name%`, `%player_display_name%` | Shown when the player lacks spy permission |
 | `spying_all_channels` | `%player_name%`, `%player_display_name%` | Confirmation after enabling spy on all channels |

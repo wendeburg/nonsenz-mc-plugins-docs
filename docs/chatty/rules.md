@@ -20,7 +20,7 @@ Each rule can be bypassed with the permission `chatty.rule.bypass.<rule_name>`, 
 
 ## How Rules Work
 
-All rules in `rules.yml` are evaluated against every message — not just the first matching one. Multiple rules can trigger on the same message, and their actions all execute.
+All rules in `rules.yml` are evaluated against every message - not just the first matching one. Multiple rules can trigger on the same message, and their actions all execute.
 
 For each rule:
 1. Each condition is tested as a regex pattern against the message.
@@ -56,7 +56,7 @@ This rule:
 
 ## Use Cases
 
-- **Word filter** — Block or censor specific words with `cancel_message` or `replace_with`
-- **Regex content filter** — Match complex patterns like URLs or IP addresses
-- **Automated moderation** — Execute punishment commands when rules trigger
-- **Message transformation** — Replace text patterns (e.g., emoticon shortcuts)
+- **Word filter** - Block or censor specific words with `cancel_message` or `replace_with`
+- **Regex content filter** - Match complex patterns like URLs or IP addresses
+- **Automated moderation** - Execute punishment commands when rules trigger
+- **Message transformation** - Replace text patterns (e.g., emoticon shortcuts)
