@@ -27,12 +27,20 @@ A format is made up of four sections displayed in order: **prefix**, **name**, *
 | `COPY_TO_CLIPBOARD` | Copies the value to the player's clipboard |
 | `OPEN_URL` | Opens the value as a URL in the player's browser |
 | `OPEN_FILE` | Opens a local file |
+| `CUSTOM` | Fires a custom event identified by a namespaced key. Intended for plugins that listen for custom click events via the `PlayerCustomClickEvent` listener. |
 
 Click action format:
 ```yaml
 click:
   action: 'SUGGEST_COMMAND'
   value: '/msg %player_name% '
+```
+
+The `CUSTOM` action takes a namespaced key as its value:
+```yaml
+click:
+  action: 'CUSTOM'
+  value: 'myplugin:event_name'
 ```
 
 ## Placeholders
